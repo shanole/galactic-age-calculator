@@ -13,6 +13,16 @@ describe('Person', () => {
     expect(testPerson.sex).toEqual("female");
   });
 
+  test("should have a lifeExpectancy property equal to 81 if the sex is female, and equal to 77 if the sex is male", () => {
+    expect(testPerson.lifeExpectancy).toEqual(81);
+    expect(maleTestPerson.lifeExpectancy).toEqual(77);
+  });
+
+  test('should have a setAdjustedLifeExpectancy method that sets the lifeExpectancy property of a person to be higher or lower based on their life habits', () => {
+    testPerson.setAdjustedLifeExpectancy(["smoking","drinking","stress","exercise","diet","happy"]);
+    expect(testPerson.lifeExpectancy).toEqual(86);
+  });
+
   test("should have a getPlanetAge method that returns the Person's age divided by 0.24 when the given parameter is Mercury", () => {
     expect(testPerson.getPlanetAge("mercury")).toEqual(25/.24);;
   });
@@ -29,12 +39,7 @@ describe('Person', () => {
     expect(testPerson.getPlanetAge("jupiter")).toEqual(25/11.86);
   });
 
-  test("should have a lifeExpectancy property equal to 81 if the sex is female, and equal to 77 if the sex is male", () => {
-    expect(testPerson.lifeExpectancy).toEqual(81);
-    expect(maleTestPerson.lifeExpectancy).toEqual(77);
-  });
-
-  test("should have a method getTimeLeft that returns the difference between the average life expectancy on a given planet and the Person's age on that planet", () => {
+  test("should have a method getTimeLeft that returns the difference between the adjusted life expectancy on a given planet and the Person's age on that planet", () => {
     expect(testPerson.getTimeLeft("mercury")).toEqual((81/0.24) - (25/0.24));
     expect(testPerson.getTimeLeft("venus")).toEqual((81/0.62) - (25/0.62));
     expect(testPerson.getTimeLeft("mars")).toEqual((81/1.88) - (25/1.88));
@@ -45,9 +50,4 @@ describe('Person', () => {
     let oldPerson = new Person(90,"female");
     expect(oldPerson.getTimeLeft("mercury")).toEqual(-37.5);
   });
-
-  test('should have a setAdjustedLifeExpectancy method that sets the lifeExpectancy property of a person to be higher or lower than average based on their life habits', () => {
-    testPerson.setAdjustedLifeExpectancy(["smoking","drinking","stress","exercise","diet","happy"]);
-    expect(testPerson.lifeExpectancy).toEqual(86);
-  })
 })
