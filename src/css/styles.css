@@ -2,6 +2,10 @@
   display: none;
 }
 
-#life-expectancy-results {
+#life-expectancy-results-young {
   display: none;
+}
+
+#life-expectancy-results-old {
+  display:none;
 }
