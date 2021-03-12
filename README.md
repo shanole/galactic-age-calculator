@@ -6,14 +6,19 @@
 
 #### _Table of Contents_
 
-1. [Technologies Used](#technologies)
-2. [Description](#description)
+1. [Description](#description)
+2. [Technologies Used](#technologies)
 3. [Setup/Installation Requirements](#setup)
 4. [Additional Setup/Installation Note for Windows Users](#windows)
 5. [Specifications](#specs)
 6. [Known Bugs](#bugs)
 7. [License](#license)
 8. [Contact Information](#contact)
+
+
+## Description <a id="description"></a>
+
+This is a web application for a Galactic Calculator that calculates your relative age in years if you were living on Mercury, Venus, Mars or Jupiter. It also has functionality to calculate how many years of life you could expect to have left on a given planet based on your biological sex and life habits.
 
 ## Technologies Used <a id="technologies"></a>
 
@@ -38,10 +43,6 @@
 * _webpack 4.39.3_
 * _webpack-cli 3.3.8_
 * _webpack-dev-server 3.11.2_
-
-## Description <a id="description"></a>
-
-This is a web application for a Galactic Calculator that calculates your relative age in years if you were living on Mercury, Venus, Mars or Jupiter. It also has functionality to calculate how many years of life you could expect to have left on a given planet based on your gender and life habits.
 
 ## Setup/Installation Requirements <a id="setup"></a>
 
