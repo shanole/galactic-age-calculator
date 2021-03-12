@@ -1,10 +1,10 @@
 const Planet = {
-  "mercury" : 0.24,
-  "venus" : 0.62,
-  "mars" : 1.88,
-  "jupiter" : 11.86,
-  "earth" : 1
-}
+  "Mercury" : 0.24,
+  "Venus" : 0.62,
+  "Mars" : 1.88,
+  "Jupiter" : 11.86,
+  "Earth" : 1
+};
 
 export default class Person {
   constructor(age,sex) {
@@ -25,11 +25,11 @@ export default class Person {
       "exercise": 7,
       "diet": 10,
       "happy": 5
-    }
+    };
     let habitsDifference = 0;
     habitsArray.forEach(function(habit) {
       habitsDifference += LifeHabits[habit];
-    })
+    });
     this.lifeExpectancy += habitsDifference;
   }
 
