@@ -6,19 +6,14 @@
 
 #### _Table of Contents_
 
-1. [Preview](#preview)
-2. [Technologies Used](#technologies)
-3. [Description](#description)
-4. [Setup/Installation Requirements](#setup)
-5. [Additional Setup/Installation Note for Windows Users](#windows)
-6. [Specifications](#specs)
-7. [Known Bugs](#bugs)
-8. [License](#license)
-9. [Contact Information](#contact)
-
-## Preview <a id="preview"></a>
-
-* _Direct your browser to a [live version](shanole.github.io/project/index.html) on GitHub Pages._
+1. [Technologies Used](#technologies)
+2. [Description](#description)
+3. [Setup/Installation Requirements](#setup)
+4. [Additional Setup/Installation Note for Windows Users](#windows)
+5. [Specifications](#specs)
+6. [Known Bugs](#bugs)
+7. [License](#license)
+8. [Contact Information](#contact)
 
 ## Technologies Used <a id="technologies"></a>
 
