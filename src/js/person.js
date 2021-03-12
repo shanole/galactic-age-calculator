@@ -21,6 +21,10 @@ export default class Person {
     return this.age/1.88;
   }
 
+  getJupiterAge() {
+    return this.age/11.86;
+  }
+
   getLifeExpectancy() {
     let lifeExpectancy;
     if (this.sex === "female") {

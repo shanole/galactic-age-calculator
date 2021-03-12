@@ -38,5 +38,9 @@ describe('Person', () => {
   test("should have a method getMarsAge that returns the Person's age divided by 1.88", () => {
     expect(testPerson.getMarsAge()).toEqual(25/1.88);
   });
+
+  test("should have a method getJupiterAge that returns the Person's age divided by 1.88", () => {
+    expect(testPerson.getJupiterAge()).toEqual(25/11.86);
+  });
   
 })
