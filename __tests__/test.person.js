@@ -2,10 +2,8 @@ import Person from './../src/js/person.js'
 
 describe('Person', () => {
   let testPerson;
-  let maleTestPerson;
   beforeEach(() => {
     testPerson = new Person(25,"female");
-    maleTestPerson = new Person(32,"male");
   });
 
   test('should create a Person object with age and sex properties', () => {
@@ -14,6 +12,7 @@ describe('Person', () => {
   });
 
   test("should have a lifeExpectancy property equal to 81 if the sex is female, and equal to 77 if the sex is male", () => {
+    let maleTestPerson = new Person(32,"male")
     expect(testPerson.lifeExpectancy).toEqual(81);
     expect(maleTestPerson.lifeExpectancy).toEqual(77);
   });
