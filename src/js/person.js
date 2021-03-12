@@ -11,14 +11,30 @@ export default class Person {
     this.sex = sex;
     this.habits = [];
     if (sex === "female") {
-      this.avgLifeExpectancy = 81;
+      this.lifeExpectancy = 81;
     } else {
-      this.avgLifeExpectancy = 77;
+      this.lifeExpectancy = 77;
     }
   }
 
-  addHabits(habit) {
+  addHabit(habit) {
     this.habits.push(habit);
+  }
+
+  setAdjustedLifeExpectancy() {
+    const LifeHabits = {
+      "smoking": -10,
+      "drinking": -2,
+      "stress": -5,
+      "exercise": 7,
+      "diet": 10,
+      "happy": 5
+    }
+    let habitsDifference = 0;    
+    this.habits.forEach(function(habit) {
+      habitsDifference += LifeHabits[habit];
+    })
+    this.lifeExpectancy += habitsDifference;
   }
 
   getPlanetAge(planet) {
@@ -26,7 +42,7 @@ export default class Person {
   }
 
   getTimeLeft(planet) {
-    let planetLifeExpectancy = this.avgLifeExpectancy/Planet[planet];
+    let planetLifeExpectancy = this.lifeExpectancy/Planet[planet];
     return planetLifeExpectancy - this.getPlanetAge(planet);
   }
 }

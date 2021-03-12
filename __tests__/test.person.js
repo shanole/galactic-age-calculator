@@ -13,25 +13,25 @@ describe('Person', () => {
     expect(testPerson.sex).toEqual("female");
   });
 
-  test("should have a method getPlanetAge that returns the Person's age divided by 0.24 when the given parameter is Mercury", () => {
+  test("should have a getPlanetAge method that returns the Person's age divided by 0.24 when the given parameter is Mercury", () => {
     expect(testPerson.getPlanetAge("mercury")).toEqual(25/.24);;
   });
 
-  test("should have a method getPlanetAge that returns the Person's age divided by 0.62 when the given parameter is Venus", () => {
+  test("should have a getPlanetAge method that returns the Person's age divided by 0.62 when the given parameter is Venus", () => {
     expect(testPerson.getPlanetAge("venus")).toEqual(25/.62);
   });
 
-  test("should have a method getPlanetAge that returns the Person's age divided by 1.88 when the given parameter is Mars", () => {
+  test("should have a getPlanetAge method that returns the Person's age divided by 1.88 when the given parameter is Mars", () => {
     expect(testPerson.getPlanetAge("mars")).toEqual(25/1.88);
   });
 
-  test("should have a method getPlanetAge that returns the Person's age divided by 11.86 when the given parameter is Jupiter", () => {
+  test("should have a getPlanetAge method that returns the Person's age divided by 11.86 when the given parameter is Jupiter", () => {
     expect(testPerson.getPlanetAge("jupiter")).toEqual(25/11.86);
   });
 
-  test("should have a avgLifeExpectancy property equal to 81 if the sex is female, and equal to 77 if the sex is male", () => {
-    expect(testPerson.avgLifeExpectancy).toEqual(81);
-    expect(maleTestPerson.avgLifeExpectancy).toEqual(77);
+  test("should have a lifeExpectancy property equal to 81 if the sex is female, and equal to 77 if the sex is male", () => {
+    expect(testPerson.lifeExpectancy).toEqual(81);
+    expect(maleTestPerson.lifeExpectancy).toEqual(77);
   });
 
   test("should have a method getTimeLeft that returns the difference between the average life expectancy on a given planet and the Person's age on that planet", () => {
@@ -50,8 +50,14 @@ describe('Person', () => {
     expect(testPerson.habits).toEqual([]);
   })
 
-  test('should have a addHabits method that adds the parameter to the habits array', () => {
-    testPerson.addHabits("smoking");
+  test('should have a addHabit method that adds the parameter to the habits array', () => {
+    testPerson.addHabit("smoking");
     expect(testPerson.habits).toEqual(["smoking"]);
+  })
+
+  test('should have a setAdjustedLifeExpectancy method that sets the lifeExpectancy property of a person to be higher or lower than average based on their life habits', () => {
+    testPerson.habits = ["smoking","drinking","stress","exercise","diet","happy"];
+    testPerson.setAdjustedLifeExpectancy();
+    expect(testPerson.lifeExpectancy).toEqual(86);
   })
 })
