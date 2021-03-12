@@ -3,11 +3,46 @@
 
 <head>
   <title>Galactic Age Calculator</title>
-  <!-- When change this title must change title in webpack.config.js plugins section and in package.json -->
 </head>
 
 <body>
-
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Galactic Age Calculator</h1>
+    </div>
+    <form id="calculator">
+      <div class="form-group">
+        <label for="name">What is your name?</label>
+        <input class="form-control" id="name" type="text" required>
+        <label for="age">How old are you (in years?)</label>
+        <input class="form-control" id="age" pattern="[0-9]+" required><br>
+        <p>Select all that apply to you below:</p>
+        <input type="checkbox" class="habits" value="smoking"> I am a smoker<br>
+        <input type="checkbox" class="habits" value="drinking"> I consume more than 1 alcoholic beverage a day on average<br>
+        <input type="checkbox" class="habits" value="stress"> I am frequently stressed out<br>
+        <input type="checkbox" class="habits" value="exercise"> I regularly exercise at least 3 times a week<br>
+        <input type="checkbox" class="habits" value="diet"> I eat a healthy diet<br>
+        <input type="checkbox" class="habits" value="happy"> I consider myself to be a generally happy person<br><br>
+        <label for="planet">Which planet do you want to live on?</label>
+        <select class="form-control" id="planet">
+          <option value="mercury">Mercury</option>
+          <option value="venus">Venus</option>
+          <option value="mars">Mars</option>
+          <option value="jupiter">Jupiter</option>
+          <option value="earth">I like it here on Earth, thank you</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-success">See your galactic age!</button>
+    </form>
+    <div id="age results">
+      <h3>Here are your results:</h3>
+      <p><span id="name"></span>, on <span id="planet"></span>, you are <span id="planet-age"></span> years old.</p>
+    </div>
+    <div id="life-expectancy-results">
+      <p id="young">You can expect to live for another <span id="time-left"></span> <span id="planet-age"></span> years.</p>
+      <p id="old">You have exceeded your average life expectancy by <span id="time-left"></span> <span id="planet-age"></span> years! Wow, hope I look like you when I'm that age!</p>
+    </div>
+  </div>
 </body>
 
 </html>
