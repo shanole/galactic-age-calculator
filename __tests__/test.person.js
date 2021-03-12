@@ -50,4 +50,10 @@ describe('Person', () => {
     let oldPerson = new Person(90,"female");
     expect(oldPerson.getTimeLeft("Mercury")).toEqual(-37.5);
   });
+
+  test('weird error', () => {
+    let oldPerson = new Person(90,"female");
+    oldPerson.setAdjustedLifeExpectancy(["smoking"]);
+    expect(oldPerson.getTimeLeft("Mercury")).toEqual(-79.1667);
+  })
 })
