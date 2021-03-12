@@ -9,7 +9,6 @@ export default class Person {
   constructor(age,sex) {
     this.age = age;
     this.sex = sex;
-    this.habits = [];
     if (sex === "female") {
       this.lifeExpectancy = 81;
     } else {
@@ -17,11 +16,7 @@ export default class Person {
     }
   }
 
-  addHabit(habit) {
-    this.habits.push(habit);
-  }
-
-  setAdjustedLifeExpectancy() {
+  setAdjustedLifeExpectancy(habitsArray) {
     const LifeHabits = {
       "smoking": -10,
       "drinking": -2,
@@ -30,8 +25,8 @@ export default class Person {
       "diet": 10,
       "happy": 5
     }
-    let habitsDifference = 0;    
-    this.habits.forEach(function(habit) {
+    let habitsDifference = 0;
+    habitsArray.forEach(function(habit) {
       habitsDifference += LifeHabits[habit];
     })
     this.lifeExpectancy += habitsDifference;

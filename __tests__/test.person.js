@@ -46,18 +46,8 @@ describe('Person', () => {
     expect(oldPerson.getTimeLeft("mercury")).toEqual(-37.5);
   });
 
-  test('should have a habits property that is an array', () => {
-    expect(testPerson.habits).toEqual([]);
-  })
-
-  test('should have a addHabit method that adds the parameter to the habits array', () => {
-    testPerson.addHabit("smoking");
-    expect(testPerson.habits).toEqual(["smoking"]);
-  })
-
   test('should have a setAdjustedLifeExpectancy method that sets the lifeExpectancy property of a person to be higher or lower than average based on their life habits', () => {
-    testPerson.habits = ["smoking","drinking","stress","exercise","diet","happy"];
-    testPerson.setAdjustedLifeExpectancy();
+    testPerson.setAdjustedLifeExpectancy(["smoking","drinking","stress","exercise","diet","happy"]);
     expect(testPerson.lifeExpectancy).toEqual(86);
   })
 })
