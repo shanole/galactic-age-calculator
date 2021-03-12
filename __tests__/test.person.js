@@ -32,13 +32,17 @@ describe('Person', () => {
   test("should have a avgLifeExpectancy property equal to 81 if the sex is female, and equal to 77 if the sex is male", () => {
     expect(testPerson.avgLifeExpectancy).toEqual(81);
     expect(maleTestPerson.avgLifeExpectancy).toEqual(77);
-  })
+  });
 
   test("should have a method getTimeLeft that returns the difference between the average life expectancy on a given planet and the Person's age on that planet", () => {
     expect(testPerson.getTimeLeft("mercury")).toEqual((81/0.24) - (25/0.24));
     expect(testPerson.getTimeLeft("venus")).toEqual((81/0.62) - (25/0.62));
     expect(testPerson.getTimeLeft("mars")).toEqual((81/1.88) - (25/1.88));
     expect(testPerson.getTimeLeft("jupiter")).toEqual((81/11.86) - (25/11.86));
+  });
 
-  })
+  test('getTimeLeft should return a negative number if the Person has exceeded the average life expectancy', () => {
+    let oldPerson = new Person(90,"female");
+    expect(oldPerson.getTimeLeft("mercury")).toEqual(-37.5);
+  });
 })
