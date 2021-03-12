@@ -2,7 +2,8 @@ const Planet = {
   "mercury" : 0.24,
   "venus" : 0.62,
   "mars" : 1.88,
-  "jupiter" : 11.86
+  "jupiter" : 11.86,
+  "earth" : 1
 }
 
 export default class Person {
