@@ -16,12 +16,20 @@ $("form#calculator").submit(function(event) {
   });
   user.setAdjustedLifeExpectancy(userHabits);
   const timeLeft = user.getTimeLeft(selectedPlanet);
+  console.log(timeLeft);
 
   $("#user-name").text(userName);
-  $("#your-planet").text(selectedPlanet);
+  $(".your-planet").text(selectedPlanet);
   $("#planet-age").text(user.getPlanetAge(selectedPlanet));
-  $("#time-left").text(timeLeft);
-
   $("#age-results").show();
 
+  if (timeLeft > 0){
+    $(".time-left").text(timeLeft);
+    $("#life-expectancy-results-young").show();
+  } else {
+    $(".time-left").text(timeLeft*-1);
+    $("#life-expectancy-results-old").show();
+  }
+  
+  $("form#calculator").hide();
 });
