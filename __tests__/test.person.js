@@ -22,11 +22,6 @@ describe('Person', () => {
     expect(testPerson.habits).toEqual(["smoking"]);
   });
 
-  test('should have a method getLifeExpectancy that returns 81 if the Person is female, and 77 if the Person is male', () => {
-    expect(testPerson.getLifeExpectancy()).toEqual(81);
-    expect(maleTestPerson.getLifeExpectancy()).toEqual(77);
-  });
-
   test("should have a method getMercuryAge that returns the Person's age divided by 0.24", () => {
     expect(testPerson.getMercuryAge()).toEqual(25/.24);
   });
@@ -42,5 +37,10 @@ describe('Person', () => {
   test("should have a method getJupiterAge that returns the Person's age divided by 1.88", () => {
     expect(testPerson.getJupiterAge()).toEqual(25/11.86);
   });
+
+  test("should have a lifeExpectancy property equal to 81 if the sex is female, and equal to 77 if the sex is male", () => {
+    expect(testPerson.lifeExpectancy).toEqual(81);
+    expect(maleTestPerson.lifeExpectancy).toEqual(77);
+  })
   
 })

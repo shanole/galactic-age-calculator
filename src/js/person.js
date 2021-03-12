@@ -3,6 +3,11 @@ export default class Person {
     this.age = age;
     this.sex = sex;
     this.habits = [];
+    if (sex === "female") {
+      this.lifeExpectancy = 81;
+    } else {
+      this.lifeExpectancy = 77;
+    }
   }
 
   addHabit(habit) {
@@ -23,15 +28,5 @@ export default class Person {
 
   getJupiterAge() {
     return this.age/11.86;
-  }
-
-  getLifeExpectancy() {
-    let lifeExpectancy;
-    if (this.sex === "female") {
-      lifeExpectancy = 81;
-    } else {
-      lifeExpectancy = 77;
-    }
-  return lifeExpectancy;
   }
 }
