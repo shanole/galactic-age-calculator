@@ -14,19 +14,13 @@ export default class Person {
     this.habits.push(habit);
   }
 
-  getMercuryAge() {
-    return this.age/0.24;
-  }
-
-  getVenusAge() {
-    return this.age/0.62;
-  }
-
-  getMarsAge() {
-    return this.age/1.88;
-  }
-
-  getJupiterAge() {
-    return this.age/11.86;
+  getPlanetAge(planet) {
+    const planetDivider = {
+      "mercury" : 0.24,
+      "venus" : 0.62,
+      "mars" : 1.88,
+      "jupiter" : 11.86
+    }
+    return this.age/planetDivider[planet];
   }
 }
