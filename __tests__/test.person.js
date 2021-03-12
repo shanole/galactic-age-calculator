@@ -13,15 +13,6 @@ describe('Person', () => {
     expect(testPerson.sex).toEqual("female");
   });
 
-  test('should have a habits attribute that is an array', () => {
-    expect(testPerson.habits).toEqual([]);
-  });
-
-  test('should have a method addHabit that adds the parameter into the habits array', () => {
-    testPerson.addHabit("smoking");
-    expect(testPerson.habits).toEqual(["smoking"]);
-  });
-
   test("should have a method getPlanetAge that returns the Person's age divided by 0.24 when the given parameter is Mercury", () => {
     expect(testPerson.getPlanetAge("mercury")).toEqual(25/.24);;
   });

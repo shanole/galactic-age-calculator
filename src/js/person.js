@@ -2,16 +2,11 @@ export default class Person {
   constructor(age,sex) {
     this.age = age;
     this.sex = sex;
-    this.habits = [];
     if (sex === "female") {
       this.lifeExpectancy = 81;
     } else {
       this.lifeExpectancy = 77;
     }
-  }
-
-  addHabit(habit) {
-    this.habits.push(habit);
   }
 
   getPlanetAge(planet) {
