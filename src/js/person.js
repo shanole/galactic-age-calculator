@@ -4,4 +4,8 @@ export default class Person {
     this.sex = sex;
     this.habits = [];
   }
+
+  addHabit(habit) {
+    this.habits.push(habit);
+  }
 }
