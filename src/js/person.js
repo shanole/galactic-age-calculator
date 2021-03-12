@@ -8,4 +8,14 @@ export default class Person {
   addHabit(habit) {
     this.habits.push(habit);
   }
+
+  getLifeExpectancy() {
+    let lifeExpectancy;
+    if (this.sex === "female") {
+      lifeExpectancy = 81;
+    } else {
+      lifeExpectancy = 77;
+    }
+  return lifeExpectancy;
+  }
 }

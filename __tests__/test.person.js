@@ -2,8 +2,10 @@ import Person from './../src/js/person.js'
 
 describe('Person', () => {
   let testPerson;
+  let maleTestPerson;
   beforeEach(() => {
-    testPerson = new Person(25,"female")
+    testPerson = new Person(25,"female");
+    maleTestPerson = new Person(32,"male");
   });
 
   test('should create a Person object with age and sex properties', () => {
@@ -18,5 +20,10 @@ describe('Person', () => {
   test('should have a method addHabit that adds the parameter into the habits array', () => {
     testPerson.addHabit("smoking");
     expect(testPerson.habits).toEqual(["smoking"]);
+  })
+
+  test('should have a method getLifeExpectancy that returns 81 if the Person is female, and 77 if the Person is male', () => {
+    expect(testPerson.getLifeExpectancy()).toEqual(81);
+    expect(maleTestPerson.getLifeExpectancy()).toEqual(77);
   })
 })
