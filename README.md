@@ -1,6 +1,6 @@
 # Galactic Age Calculator
 
-#### _Brief description of application_
+#### Epicodus Code Review #5: Test-Driven Development and Webpack
 
 #### By Shannon Lee
 
@@ -46,31 +46,33 @@
 
 ## Description <a id="description"></a>
 
-_This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have. Balance between a summary of the project and a tame market pitch._
+This is a web application for a Galactic Calculator that calculates your relative age in years if you were living on Mercury, Venus, Mars or Jupiter. It also has functionality to calculate how many years of life you could expect to have left on a given planet based on your gender and life habits.
 
 ## Setup/Installation Requirements <a id="setup"></a>
 
-* _Open the terminal on your local machine_
-* _If [Node.js](https://nodejs.org/en/) and [Node Package Manager (npm)](https://www.npmjs.com/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)_
-* _Navigate to the directory inside of which you wish to house this project_
-* _Clone this project with the following git command `$ git clone <https://github.com/jessicarubinwilliams/project>`_
-* _Navigate to the top level of the repository with the command `$ cd project`_
-* _Recreate project environment and install required dependencies with terminal command `$ npm install`_
-* _Create production environment with terminal command `$ npm run build`_
-* _Open project in a development server in the browser of your choice with the command `$ npm run start`_
-* _Lint code with the command `$ npm run lint`_
-* _Run tests in Jest with the command `$ npm test`_
+Setup requirements
+* Make sure [Node.js](https://nodejs.org/en/) and [Node Package Manager (npm)](https://www.npmjs.com/) are set up on your local machine. If not, follow the installation guide [here](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js).
+* This environment was created on a Mac OS. If you are on a non Mac machine, make the following change to package.json
+  * change line 8 to `"start": "npm run build & webpack-dev-server --open --mode development",`
 
-## Additional Setup/Installation Note for Windows Users <a id="windows"></a>
+Installation
+* Clone this repository to your machine `$ git clone https://github.com/shanole/galactic-age-calculator`
+* In the terminal, navigate to the top level of this directory `galactic-age-calculator/`
+* Recreate project environment and install required dependencies `$ npm install`
+* Create production environment `$ npm run build`
+* Open project in a development server on your web browser `$ npm run start`
+* To lint code run command `$ npm run lint`
+* To run tests with Jest run command `$ npm run test`
 
-_This environment was created on a Mac. For it to work properly in your local environment make the following change:_
-* _Update package.json, line 8 to: `"start": "npm run build & webpack-dev-server --open --mode development",`_
+<!-- ## Specifications <a id="specs"></a>
 
-## Specifications <a id="specs"></a>
-
+Test specs for the Person object:
 | Behavior | Input | Output |
 |:---:|:---:|:---:|
-| The program should handle... | When it receives... | It should return... |
+| should create a Person object with age and sex properties | `testPerson = new Person(25,"female")`| `expect(testPerson.age).toEqual(25); expect(testPerson.sex).toEqual("female")`;|
+| should have a lifeExpectancy property equal to 81 if the sex is female, and equal to 77 if the sex is male | `let maleTestPerson = new Person(32,"male")` | `expect(testPerson.lifeExpectancy).toEqual(81); expect(maleTestPerson.lifeExpectancy).toEqual(77);` |
+| should have a setAdjustedLifeExpectancy method that sets the lifeExpectancy property of a person to be higher or lower based on their life habits | `testPerson.setAdjustedLifeExpectancy(["smoking","drinking","stress","exercise","diet","happy"]);` | `expect(testPerson.lifeExpectancy).toEqual(86);` | -->
+
 
 ## Known Bugs <a id="bugs"></a>
 * _Any known issues_
