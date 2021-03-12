@@ -12,11 +12,10 @@ $("form#calculator").submit(function(event) {
   let userHabits =[];
 
   $("input:checkbox:checked").each(function (){
-    userHabits.push($(this).val);
+    userHabits.push($(this).val());
   });
   user.setAdjustedLifeExpectancy(userHabits);
   const timeLeft = user.getTimeLeft(selectedPlanet);
-  console.log(timeLeft);
 
   $("#user-name").text(userName);
   $(".your-planet").text(selectedPlanet);
@@ -35,6 +34,6 @@ $("form#calculator").submit(function(event) {
   $("#refresh").show();
 
   $('#goBack').click(function() {
-    window.location.href='index.html';
+    location.reload();
   });
 });
