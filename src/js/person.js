@@ -9,6 +9,14 @@ export default class Person {
     this.habits.push(habit);
   }
 
+  getMercuryAge() {
+    return this.age/0.24;
+  }
+
+  getVenusAge() {
+    return this.age/0.62;
+  }
+
   getLifeExpectancy() {
     let lifeExpectancy;
     if (this.sex === "female") {

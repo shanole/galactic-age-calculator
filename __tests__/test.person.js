@@ -26,4 +26,8 @@ describe('Person', () => {
     expect(testPerson.getLifeExpectancy()).toEqual(81);
     expect(maleTestPerson.getLifeExpectancy()).toEqual(77);
   })
+
+  test("should have a method getMercuryAge that returns the Person's age divided by 0.24", () => {
+    expect(testPerson.getMercuryAge()).toEqual(25/.24);
+  })
 })
