@@ -41,8 +41,12 @@ describe('Person', () => {
     expect(testPerson.getTimeLeft("jupiter")).toEqual((81/11.86) - (25/11.86));
   });
 
-  test('getTimeLeft should return a negative number if the Person has exceeded the average life expectancy', () => {
+  test('should have a getTimeLeft method that returns a negative number if the Person has exceeded the average life expectancy', () => {
     let oldPerson = new Person(90,"female");
     expect(oldPerson.getTimeLeft("mercury")).toEqual(-37.5);
   });
+
+  test('should have a habits property that is an array', () => {
+    expect(testPerson.habits).toEqual([]);
+  })
 })

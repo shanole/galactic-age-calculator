@@ -9,6 +9,7 @@ export default class Person {
   constructor(age,sex) {
     this.age = age;
     this.sex = sex;
+    this.habits = [];
     if (sex === "female") {
       this.avgLifeExpectancy = 81;
     } else {
