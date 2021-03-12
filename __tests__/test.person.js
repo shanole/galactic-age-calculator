@@ -49,4 +49,9 @@ describe('Person', () => {
   test('should have a habits property that is an array', () => {
     expect(testPerson.habits).toEqual([]);
   })
+
+  test('should have a addHabits method that adds the parameter to the habits array', () => {
+    testPerson.addHabits("smoking");
+    expect(testPerson.habits).toEqual(["smoking"]);
+  })
 })

@@ -17,6 +17,10 @@ export default class Person {
     }
   }
 
+  addHabits(habit) {
+    this.habits.push(habit);
+  }
+
   getPlanetAge(planet) {
     return this.age/Planet[planet];
   }
