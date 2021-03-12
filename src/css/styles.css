@@ -7,5 +7,9 @@
 }
 
 #life-expectancy-results-old {
-  display:none;
+  display: none;
+}
+
+#refresh {
+  display: none;
 }
