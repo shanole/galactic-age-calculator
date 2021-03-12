@@ -32,4 +32,9 @@ $("form#calculator").submit(function(event) {
   }
   
   $("form#calculator").hide();
+  $("#refresh").show();
+
+  $('#goBack').click(function() {
+    window.location.href='index.html';
+  });
 });
