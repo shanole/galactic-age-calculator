@@ -9,26 +9,28 @@ $("form#calculator").submit(function(event) {
   const user = new Person(parseInt($("#age").val()), $("#sex").val());
   const userName = $("#name").val();
   const selectedPlanet = $("#planet").val();
-  let userHabits =[];
+  const userAge = user.getPlanetAge(selectedPlanet);
 
+  let userHabits =[];
   $("input:checkbox:checked").each(function (){
     userHabits.push($(this).val());
   });
   user.setAdjustedLifeExpectancy(userHabits);
-  const timeLeft = user.getTimeLeft(selectedPlanet);
 
-  $("#user-name").text(userName);
-  $(".your-planet").text(selectedPlanet);
-  $("#planet-age").text(user.getPlanetAge(selectedPlanet));
-  $("#age-results").show();
+  let timeLeft = user.getTimeLeft(selectedPlanet);
+  let timeLeftMessage;
 
-  if (timeLeft > 0){
-    $(".time-left").text(timeLeft);
-    $("#life-expectancy-results-young").show();
+  if (timeLeft > 0){  
+    timeLeftMessage = `<p>You can expect to live for another ${timeLeft} ${selectedPlanet} years.</p>`;
   } else {
-    $(".time-left").text(timeLeft*-1);
-    $("#life-expectancy-results-old").show();
+    timeLeft = timeLeft * -1;
+    timeLeftMessage = `<p>You have exceeded your life expectancy by ${timeLeft} ${selectedPlanet} years! Wow, hope I look like you if I get to that age!</p>`;
   }
+
+  const ageMessage = `<h3>${userName}, on ${selectedPlanet}, you are ${userAge} ${selectedPlanet} years old.</h3>`;
+
+  $("#age-results").html(ageMessage);
+  $("#time-left-results").html(timeLeftMessage);
   
   $("form#calculator").hide();
   $("#refresh").show();
