@@ -31,8 +31,12 @@ describe('Person', () => {
     expect(testPerson.getMercuryAge()).toEqual(25/.24);
   });
 
-  test("should have a method getVenusAge that returns the Person's age divided by 0.24", () => {
+  test("should have a method getVenusAge that returns the Person's age divided by 0.62", () => {
     expect(testPerson.getVenusAge()).toEqual(25/.62);
+  });
+
+  test("should have a method getMarsAge that returns the Person's age divided by 1.88", () => {
+    expect(testPerson.getMarsAge()).toEqual(25/1.88);
   });
   
 })
