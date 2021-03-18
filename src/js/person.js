@@ -37,5 +37,15 @@ export default class Person {
   }
 
   getTimeLeft(planet) {
+    const Planet = {
+      "Mercury" : 0.24,
+      "Venus" : 0.62,
+      "Mars" : 1.88,
+      "Jupiter" : 11.86,
+      "Earth" : 1
+    };
+    let planetLifeExpectancy = this.lifeExpectancy/Planet[planet];
+    let timeLeft = planetLifeExpectancy - this.getPlanetAge(planet)
+    return timeLeft.toFixed(2);
   }
 }
