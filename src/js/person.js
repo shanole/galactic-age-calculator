@@ -1,11 +1,3 @@
-const Planet = {
-  "Mercury" : 0.24,
-  "Venus" : 0.62,
-  "Mars" : 1.88,
-  "Jupiter" : 11.86,
-  "Earth" : 1
-};
-
 export default class Person {
   constructor(age,sex) {
     this.age = age;
@@ -34,10 +26,24 @@ export default class Person {
   }
 
   getPlanetAge(planet) {
+    const Planet = {
+      "Mercury" : 0.24,
+      "Venus" : 0.62,
+      "Mars" : 1.88,
+      "Jupiter" : 11.86,
+      "Earth" : 1
+    };
     return this.age/Planet[planet];
   }
 
   getTimeLeft(planet) {
+    const Planet = {
+      "Mercury" : 0.24,
+      "Venus" : 0.62,
+      "Mars" : 1.88,
+      "Jupiter" : 11.86,
+      "Earth" : 1
+    };
     let planetLifeExpectancy = this.lifeExpectancy/Planet[planet];
     return planetLifeExpectancy - this.getPlanetAge(planet);
   }
