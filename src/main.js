@@ -11,6 +11,8 @@ $("form#calculator").submit(function(event) {
   const selectedPlanet = $("#planet").val();
   const userAge = user.getPlanetAge(selectedPlanet);
 
+  user.setLifeExpectancy();
+
   let userHabits =[];
   $("input:checkbox:checked").each(function (){
     userHabits.push($(this).val());

@@ -5,6 +5,11 @@ export default class Person {
   }
 
   setLifeExpectancy() {
+    if (this.sex === "female") {
+      this.lifeExpectancy = 81;
+    } else {
+      this.lifeExpectancy = 77;
+    }
   }
 
   setAdjustedLifeExpectancy(habitsArray) {
