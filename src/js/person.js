@@ -2,11 +2,9 @@ export default class Person {
   constructor(age,sex) {
     this.age = age;
     this.sex = sex;
-    if (sex === "female") {
-      this.lifeExpectancy = 81;
-    } else {
-      this.lifeExpectancy = 77;
-    }
+  }
+
+  setLifeExpectancy() {
   }
 
   setAdjustedLifeExpectancy(habitsArray) {
@@ -45,7 +43,7 @@ export default class Person {
       "Earth" : 1
     };
     let planetLifeExpectancy = this.lifeExpectancy/Planet[planet];
-    let timeLeft = planetLifeExpectancy - this.getPlanetAge(planet)
+    let timeLeft = planetLifeExpectancy - this.getPlanetAge(planet);
     return timeLeft.toFixed(2);
   }
 }
