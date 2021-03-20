@@ -65,16 +65,17 @@ Installation
 Please refer to `galactic-age-calculator/__tests__/test.person.js` for a comprehensive breakdown of all specs for this project. All tests were run through Jest.
 
 ```
+ PASS  __tests__/test.person.js
   Person
-    ✓ should create a Person object with age and sex properties (9ms)
-    ✓ should have a lifeExpectancy property equal to 81 if the sex is female, and equal to 77 if the sex is male (1ms)
-    ✓ should have a setAdjustedLifeExpectancy method that sets the lifeExpectancy property of a person to be higher or lower based on their life habits (1ms)
+    ✓ should create a Person object with age and sex properties (4ms)
+    ✓ should have a setLifeExpectancy method that sets the lifeExpectancy property qual to 81 if the sex is female, and equal to 77 if the sex is male
+    ✓ should have a setAdjustedLifeExpectancy method that sets the lifeExpectancy property of a person to be higher or lower based on their life habits
     ✓ should have a getPlanetAge method that returns the Person's age divided by 0.24 when the given parameter is Mercury
-    ✓ should have a getPlanetAge method that returns the Person's age divided by 0.62 when the given parameter is Venus (2ms)
-    ✓ should have a getPlanetAge method that returns the Person's age divided by 1.88 when the given parameter is Mars (1ms)
-    ✓ should have a getPlanetAge method that returns the Person's age divided by 11.86 when the given parameter is Jupiter
-    ✓ should have a method getTimeLeft that returns the difference between the adjusted life expectancy on a given planet and the Person's age on that planet (1ms)
-    ✓ should have a getTimeLeft method that returns a negative number if the Person has exceeded the average life expectancy
+    ✓ should have a getPlanetAge method that returns the Person's age divided by 0.62 when the given parameter is Venus (1ms)
+    ✓ should have a getPlanetAge method that returns the Person's age divided by 1.88 when the given parameter is Mars
+    ✓ should have a getPlanetAge method that returns the Person's age divided by 11.86 when the given parameter is Jupiter (1ms)
+    ✓ should have a method getTimeLeft that returns the difference between the adjusted life expectancy on a given planet and the Person's age on that planet
+    ✓ should have a getTimeLeft method that returns a negative number if the Person has exceeded the average life expectancy (1ms)
 
 -----------|----------|----------|----------|----------|-------------------|
 File       |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
@@ -84,6 +85,8 @@ All files  |      100 |      100 |      100 |      100 |                   |
 -----------|----------|----------|----------|----------|-------------------|
 Test Suites: 1 passed, 1 total
 Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        1.982s, estimated 2s
 ```
 
 ## Known Bugs <a id="bugs"></a>
