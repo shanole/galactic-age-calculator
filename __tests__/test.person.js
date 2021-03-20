@@ -5,6 +5,7 @@ describe('Person', () => {
   let maleTestPerson;
   beforeEach(() => {
     testPerson = new Person(25,"female");
+    testPerson.setLifeExpectancy();
   });
 
   test('should create a Person object with age and sex properties', () => {
@@ -14,12 +15,10 @@ describe('Person', () => {
 
   test('should have a setLifeExpectancy method that sets the lifeExpectancy property qual to 81 if the sex is female, and equal to 77 if the sex is male', () => {
     let maleTestPerson = new Person(32,"male");
-    testPerson.setLifeExpectancy();
     maleTestPerson.setLifeExpectancy();
     expect(testPerson.lifeExpectancy).toEqual(81);
     expect(maleTestPerson.lifeExpectancy).toEqual(77);
-  })
-
+  });
 
   test('should have a setAdjustedLifeExpectancy method that sets the lifeExpectancy property of a person to be higher or lower based on their life habits', () => {
     testPerson.setAdjustedLifeExpectancy(["smoking","drinking","stress","exercise","diet","happy"]);
@@ -51,6 +50,7 @@ describe('Person', () => {
 
   test('should have a getTimeLeft method that returns a negative number if the Person has exceeded the average life expectancy', () => {
     let oldPerson = new Person(90,"female");
+    oldPerson.setLifeExpectancy();
     expect(oldPerson.getTimeLeft("Mercury")).toEqual("-37.50");
   });
 })
